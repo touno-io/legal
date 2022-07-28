@@ -3,12 +3,12 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: "/:catchAll(.*)",
-    redirect: '/terms-use'
+    redirect: { name: 'terms' }
   },
   {
     path: '/terms-use',
     name: 'terms',
-    component: () => import('../views/terms-conditions.vue')
+    component: () => import('../views/terms-conditions.vue'),
   },
   {
     path: '/privacy',

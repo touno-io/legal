@@ -20,6 +20,9 @@ jobs:
         run: |
           yarn
           yarn build
+          cp ./dist/index.html ./dist/terms-use.html
+          cp ./dist/index.html ./dist/privacy.html
+          cp ./dist/index.html ./dist/cookies.html
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.7.1
