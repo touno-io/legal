@@ -3,22 +3,22 @@ import { createRouter, createWebHistory } from 'vue-router'
 const routes = [
   {
     path: "/:catchAll(.*)",
-    redirect: '/'
+    redirect: '/terms-use'
   },
   {
-    path: '/blogs',
-    name: 'blogs',
-    component: () => import('../views/blogs.vue')
+    path: '/terms-use',
+    name: 'terms',
+    component: () => import('../views/terms-conditions.vue')
   },
   {
-    path: '/sign-in',
-    name: 'signin',
-    component: () => import('../views/sign-in.vue')
+    path: '/privacy',
+    name: 'privacy',
+    component: () => import('../views/privacy-policy.vue')
   },
   {
-    path: '/',
-    name: '404',
-    component: () => import('../views/index.vue')
+    path: '/cookies',
+    name: 'cookie',
+    component: () => import('../views/cookie-policy.vue')
   }
 ]
 
