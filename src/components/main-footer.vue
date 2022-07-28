@@ -1,21 +1,11 @@
-<script lang="ts" setup>
-import { defineProps } from 'vue'
-
-const props = defineProps({
-  popup: {
-    type: Boolean,
-    required: false
-  }
-})
-</script>
-
 <template>
   <div class="main-footer">
-    <div v-if="!popup" class="links">
+    <div class="links">
       <h2 id="footer-links" class="visually-hidden">Links</h2>
       <ul aria-labelledby="footer-links" class="container d-flex flex-direction-row align-items-center justify-content-center h-100 mb-0">
-        <li><router-link :to="{ name: 'terms-use' }">Terms &amp; Policies</router-link></li>
-        <li><router-link :to="{ name: 'privacy' }">Legal Information</router-link></li>
+        <li class="nav-item"><router-link class="nav-link" :to="{ name: 'privacy' }">Legal Information</router-link></li>
+        <li class="nav-item"><router-link class="nav-link" :to="{ name: 'terms' }">Terms &amp; Policies</router-link></li>
+        <li class="nav-item"><router-link class="nav-link" :to="{ name: 'cookie' }">Cookie Policies</router-link></li>
       </ul>
     </div>
     <div class="licensed">
@@ -31,7 +21,6 @@ const props = defineProps({
   > .links {
     > ul {
       list-style-type: none;
-      column-gap: 3.5em;
       font-size: .8rem;
     }
   }
