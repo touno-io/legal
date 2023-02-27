@@ -9,6 +9,9 @@ import mainFooter from './components/main-footer.vue'
     <router-view />
   </div>
   <main-footer />
+  <!-- Cloudflare Web Analytics -->
+  <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "fb5b3ae4504f483f8a77f9d83d215c9c"}'></script>
+  <!-- End Cloudflare Web Analytics -->
 </template>
 
 <style lang="scss">
